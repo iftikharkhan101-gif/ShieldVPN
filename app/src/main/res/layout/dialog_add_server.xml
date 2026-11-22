@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country"
+        android:textColor="@color/muted"
+        android:textSize="13sp" />
+
+    <Spinner
+        android:id="@+id/dlgCountry"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/field_bg"
+        android:popupBackground="@color/card" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dlgImport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="@color/accent"
+        android:text="Import .conf file"
+        android:textColor="@color/text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="…or paste the WireGuard config:"
+        android:textColor="@color/muted"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/dlgConfig"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/field_bg"
+        android:fontFamily="monospace"
+        android:gravity="top|start"
+        android:hint="[Interface]\nPrivateKey = …\n\n[Peer]\n…"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:padding="12dp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/muted"
+        android:textSize="12sp" />
+</LinearLayout>
